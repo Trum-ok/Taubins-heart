@@ -14,7 +14,6 @@ def heart(x, y, z):
 
 def plot_implicit(fn, bbox=(-1.5, 1.5)):
     N = 10
-    i = 0
     while N != 200:
         """ create a plot of an implicit function
         fn  ...implicit function (plot where fn==0)
@@ -53,14 +52,13 @@ def plot_implicit(fn, bbox=(-1.5, 1.5)):
         azim = N
         ax.view_init(elev, azim)
         N += 0.5
-        i +=1
         print('ax.azim = {}'.format(ax.azim))
         print('ax.dist = {}'.format(ax.dist))
         print('ax.elev = {}'.format(ax.elev))
         print("__________________")
 
         plt.show()
-        plt.close('all')
 
+        
 if __name__ == '__main__':
     plot_implicit(heart)
